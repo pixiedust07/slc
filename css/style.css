@@ -133,6 +133,7 @@ body {
 }
 .column-right .email input[type="email"] {
     /*width: 100%;*/
+    border-bottom: 1px solid #075767b2;
     background-color: #07576738;
 }
 .column-right .email input[type="submit"] {
