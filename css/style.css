@@ -170,6 +170,48 @@ body {
     right: 0;
 }
 
+.column-right h2.divided:nth-of-type(3) {
+    margin: 2rem 0;
+    width: 100%;
+}
+.column-right h2.divided:nth-of-type(3)::before {
+    display: none;
+}
+.column-right h2.divided:nth-of-type(3)::after {
+    width: 27rem;
+    right: 2rem;
+}
+
+.column-right .banner-text {
+    color: #72888c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.column-right footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.column-right footer span {
+    color: #075767;
+}
+
+.column-right .sb_tower {
+    opacity: .2;
+}
+
+@media screen and (max-width: 1367px) {
+    .column-right .banner-text {
+        font-size: 1rem;
+    }
+    .column-right h2.divided:nth-of-type(3)::after {
+        width: 22rem;
+        right: 2rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .column-left .sb_logo {
         width: 100%;
@@ -182,6 +224,10 @@ body {
     }
     .column-right h2.divided::after{
         right: -1rem;
+    }
+    .column-right h2.divided:nth-of-type(3)::after {
+        width: 18rem;
+        right: 2rem;
     }
 }
 
@@ -228,6 +274,10 @@ body {
     .column-right .email, .column-right .social_icons {
         width: 100%;
     }
+    .column-right h2.divided:nth-of-type(3)::after {
+        width: 14rem;
+        right: 2rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -240,6 +290,16 @@ body {
     }
     .column-right .social_icons {
         justify-content: space-around;
+    }
+
+    .column-right h2.divided:nth-of-type(3){
+        width: auto;
+    }
+    .column-right h2.divided:nth-of-type(3)::after {
+        display: none;
+    }
+    .column-right h2.divided:nth-of-type(3) {
+        font-size: 1.25rem;
     }
 }
 
