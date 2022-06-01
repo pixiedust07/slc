@@ -39,7 +39,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
+    /*max-width: 1400px;*/
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -69,4 +69,169 @@ body {
 
 .column-left .cen_logo {
     width: 200px;
+}
+
+.column-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.column-right h2.divided {
+    margin-top: 1rem;
+    position: relative;
+    color: #667A7D;
+}
+.column-right h2.divided::before {
+    position: absolute;
+    content: '';
+    width: 5rem;
+    height: 2px;
+    background-color: #07576766;
+    left: -2.75rem;
+    top: 50%;
+    transform: translate(-2.75rem, -50%);
+}
+.column-right h2.divided::after {
+    position: absolute;
+    content: '';
+    width: 5rem;
+    height: 2px;
+    background-color: #07576766;
+    right: -2.75rem;
+    top: 50%;
+    transform: translate(2.75rem, -50%);
+}
+
+.column-right .email {
+    margin-top: 1rem;
+    display: grid;
+    width: 90%;
+    column-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+}
+
+.column-right .email input {
+    border: 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.column-right .email input[type="email"] {
+    /*width: 100%;*/
+    background-color: #07576738;
+}
+.column-right .email input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(91.38deg, #075767 0%, #3ABFD7 100%);
+}
+
+.column-right h2.divided:nth-of-type(2) {
+    margin-top: 2rem;
+}
+
+.column-right .social_icons{
+    margin-top: 1rem;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+.column-right  .social_icons i {
+    font-size: 3rem;
+}
+.column-right .social_icons i.fa-whatsapp {
+    color: #25D366;
+}
+.column-right .social_icons i.fa-telegram {
+    color: #0088cc;
+}
+.column-right .social_icons i.fa-discord {
+    color: #7289DA;
+}
+.column-right .sb_tower {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .column-right h2.divided::before, .column-right h2.divided::after {
+        width: 3rem;
+    }
+    .column-right h2.divided::before{
+        left: -1rem;
+    }
+    .column-right h2.divided::after{
+        right: -1rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        padding:0;
+        column-gap: 0;
+        box-shadow: none;
+    }
+    .column-left, .column-right {
+        height: calc(100vh - 2rem);
+    }
+    .column-left {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .column-right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .column-right h2 {
+        font-size: 1.25rem;
+    }
+    .column-right h2.divided::before,
+    .column-right h2.divided::after {
+        width: 2rem;
+    }
+
+    .column-right h2.divided::before {
+        left: 0rem;
+    }
+
+    .column-right h2.divided::after {
+        right: 0rem;
+    }
+    .column-right .email, .column-right .social_icons {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+    .column-left .sb_logo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .column-right .email {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+    .column-right h2 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .column-right h2 {
+        font-size: .8rem;
+    }
 }
