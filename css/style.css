@@ -73,10 +73,12 @@ body {
 
 .column-left .hero_heading {
     font-size: 2rem;
+    color: #075767c5;
 }
 
 .column-left .hero_heading span {
     font-size: 3rem;
+    color: #075767;
 }
 
 .column-right {
@@ -289,6 +291,21 @@ body {
     .column-left {
         height: auto;
     }
+    .column-left > * {
+        margin-bottom: 1rem;
+    }
+    .column-left .scribble_logo {
+        width: 100px;
+    }
+    .column-left .scribble_text {
+        font-size: 1.5rem;
+    }
+    .column-left .hero_heading {
+        font-size: 1.25rem;
+    }
+    .column-left .cen_logo {
+        width: 100px;
+    }
     .column-right .social_icons {
         justify-content: space-around;
     }
@@ -326,11 +343,10 @@ body {
     }
 }
 @media screen and (max-width: 360px) {
+    .column-left .scribble_text {
+        font-size: 1.15rem;
+    }
     .column-right h2 {
         font-size: .8rem;
     }
 }
-
-
-
-/* 680px */
